@@ -1,13 +1,12 @@
 import './App.css'
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext';
-import { ProtectedRoute } from './context/ProtectedRoute';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider } from './authentication/AuthContext.tsx';
+import { ProtectedRoute } from './authentication/ProtectedRoute.tsx';
 
 // Views
 import Home from "./views/Home.tsx"
-import SignUp from "./views/SignUp.tsx"
-import SignIn from "./views/SignIn.tsx"
+import Auth from './authentication/Auth.tsx';
 
 // Components
 import Navbar from "./components/Navbar.tsx";
@@ -27,8 +26,7 @@ function App() {
           <Routes>
             {/* Public Routes */}
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<SignIn />} />
-            <Route path="/create-account" element={<SignUp />} />
+            <Route path="/login" element={<Auth />} />
 
             {/* Protected Routes */}
             <Route path="/dashboard" element={<ProtectedRoute><div>the dashboard</div></ProtectedRoute>} />

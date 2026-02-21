@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from "react-router-dom";
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../authentication/AuthContext';
 
 const Navbar = () => {
   // State to manage whether the mobile menu is open or closed
@@ -30,7 +30,6 @@ const Navbar = () => {
             <div className="hidden md:flex space-x-6 items-center">
               <NavLink to="/" className="hover:text-emerald-400 transition-colors">Home</NavLink>
               <NavLink to="/login" className="hover:text-emerald-400 transition-colors">Login</NavLink>
-              <NavLink to="/create-account" className="hover:text-emerald-400 transition-colors">Create account</NavLink>
             </div>
 
             {/* 3. Mobile Hamburger Button (Hidden on desktop) */}
