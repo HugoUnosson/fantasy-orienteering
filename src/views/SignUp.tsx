@@ -7,7 +7,7 @@ const SignUp = () => {
                 <h2 className="font-bold text-xl">Create account</h2>
                 <p>Already have an account? <NavLink to="/singin" className="text-primary underline">Log in here</NavLink></p>
                 <div className="flex flex-col mt-6 gap-6">
-                    <div className="flex gap-2">
+                    <div className="flex gap-2">                                                                                
                         <button className="bg-slate-800 border border-slate-700 font-semibold p-3 rounded hover:cursor-pointer hover:bg-primary transition-all">G</button>
                         <button className="bg-slate-800 border border-slate-700 font-semibold p-3 rounded hover:cursor-pointer hover:bg-primary transition-all">B</button>
                         <button className="bg-slate-800 border border-slate-700 font-semibold p-3 rounded hover:cursor-pointer hover:bg-primary transition-all">C</button>
