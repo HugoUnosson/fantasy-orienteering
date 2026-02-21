@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           
           {/* 1. Brand / Logo */}
-          <div className="flex-shrink-0 flex items-center">
+          <div className="shrink-0 flex items-center">
             <span className="font-bold text-xl tracking-wider text-emerald-400">
               Fantasy Orienteering
             </span>
@@ -56,7 +56,7 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <NavLink to="/" className="block px-3 py-2 rounded-md hover:bg-slate-700 hover:text-emerald-400">Home</NavLink>
             <NavLink to="/signin" className="block px-3 py-2 rounded-md hover:bg-slate-700 hover:text-emerald-400">Sign in</NavLink>
-            <NavLink to="#" className="block px-3 py-2 rounded-md hover:bg-slate-700 hover:text-emerald-400">Leaderboard</NavLink>
+            <NavLink to="/runners" className="block px-3 py-2 rounded-md hover:bg-slate-700 hover:text-emerald-400">Runners</NavLink>
             <div className="px-3 py-2 text-emerald-400 font-semibold">
               Budget: $15,000
             </div>
