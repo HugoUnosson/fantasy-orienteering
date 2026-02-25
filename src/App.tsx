@@ -2,12 +2,12 @@ import './App.css'
 import { Route, Routes } from "react-router";
 
 // Views
-import Home from "./views/Home.tsx"
-import SignUp from "./views/SignUp.tsx"
-import SignIn from "./views/SignIn.tsx"
+import Home from "./views/Home"
+import Auth from "./views/Auth"
+import Dashboard from "./views/Dashboard"
 
 // Components
-import Navbar from "./components/Navbar.tsx";
+import Navbar from "./components/Navbar";
 
 function App() {
 
@@ -21,8 +21,8 @@ function App() {
       >
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signin" element={<Auth />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
     </div>

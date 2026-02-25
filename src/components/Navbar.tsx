@@ -23,8 +23,8 @@ const Navbar = () => {
           {/* 2. Desktop Menu (Hidden on mobile) */}
           <div className="hidden md:flex space-x-6 items-center">
             <NavLink to="/" className="hover:text-emerald-400 transition-colors">Home</NavLink>
-            <NavLink to="/signup" className="hover:text-emerald-400 transition-colors">Sign in</NavLink>
-            
+            <NavLink to="/signin" className="hover:text-emerald-400 transition-colors">Sign in</NavLink>
+            <NavLink to="/dashboard" className="hover:text-emerald-400 transition-colors">Dashboard</NavLink>
             {/* Mock Budget Display */}
             <div className="bg-slate-800 px-3 py-1 rounded-full text-sm font-semibold border border-slate-700">
               💰 $15,000
@@ -56,7 +56,6 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <NavLink to="/" className="block px-3 py-2 rounded-md hover:bg-slate-700 hover:text-emerald-400">Home</NavLink>
             <NavLink to="/signin" className="block px-3 py-2 rounded-md hover:bg-slate-700 hover:text-emerald-400">Sign in</NavLink>
-            <NavLink to="/runners" className="block px-3 py-2 rounded-md hover:bg-slate-700 hover:text-emerald-400">Runners</NavLink>
             <div className="px-3 py-2 text-emerald-400 font-semibold">
               Budget: $15,000
             </div>
