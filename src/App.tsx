@@ -2,7 +2,6 @@ import './App.css'
 import { Route, Routes } from "react-router";
 import { useEffect, useState } from 'react';
 import { supabase } from './helper/supabaseClient';
-import type { User } from '@supabase/supabase-js';
 
 // Views
 import Home from "./views/Home"
