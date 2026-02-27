@@ -8,6 +8,7 @@ import Dashboard from "./views/Dashboard"
 
 // Components
 import Navbar from "./components/Navbar";
+import ProtectingRoute from "./components/ProtectingRoute";
 
 function App() {
 
@@ -21,8 +22,8 @@ function App() {
       >
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/signin" element={<Auth />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/login" element={<Auth />} />
+          <Route path="/dashboard" element={<ProtectingRoute> <Dashboard /> </ProtectingRoute>} />
         </Routes>
       </div>
     </div>

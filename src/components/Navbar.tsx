@@ -26,7 +26,7 @@ const Navbar = () => {
           {/* 2. Desktop Menu (Hidden on mobile) */}
           <div className="hidden md:flex space-x-6 items-center">
             <NavLink to="/" className="hover:text-emerald-400 transition-colors">Home</NavLink>
-            <NavLink to="/signin" className="hover:text-emerald-400 transition-colors">Sign in</NavLink>
+            <NavLink to="/login" className="hover:text-emerald-400 transition-colors">Sign in</NavLink>
             <NavLink to="/dashboard" className="hover:text-emerald-400 transition-colors">Dashboard</NavLink>
             {/* Mock Budget Display */}
             <div className="bg-slate-800 px-3 py-1 rounded-full text-sm font-semibold border border-slate-700">
