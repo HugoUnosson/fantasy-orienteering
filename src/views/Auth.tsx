@@ -1,28 +1,30 @@
 import { useState } from "react";
 import type { SubmitEvent, ChangeEvent } from "react";
-import { supabase } from "../helper/supabaseClient";
+import { useAuth } from "../context/AuthContext"
 
 const Auth = () => {
-    const [isLogin, setIsLogin] = useState(true);
+    const [isLogin, setIsLogin] = useState(true);   // Swap this to user??
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const [isLoading, setIsLoading] = useState(false);
+    const { isLoading, signup, login} = useAuth()
 
     const handleAuth = async (e: SubmitEvent) => {
       e.preventDefault();
       
       if (!isLogin) {
         // Sign Up
-        const {error: signUp} = await supabase.auth.signUp({email, password});
-        if (signUp) {
-          console.error("Error signing up:", signUp.message)
+        try {
+          signup(email, password)
+        } catch (error) {
+          console.error(error)
         }
       } else {
         // Log In
-        const {error: signIn} = await supabase.auth.signInWithPassword({email, password});
-        if (signIn) {
-          console.error("Error signing up:", signIn.message)
+        try {
+          login(email, password)
+        } catch (error) {
+          console.error(error)
         }
       }
     };

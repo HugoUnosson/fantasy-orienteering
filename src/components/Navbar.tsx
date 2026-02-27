@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from "react-router-dom";
+import { useAuth } from "../context/AuthContext"
 
 const Navbar = () => {
   // State to manage whether the mobile menu is open or closed
@@ -7,6 +8,8 @@ const Navbar = () => {
 
   // Helper function to toggle the menu
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  const { logout, user } = useAuth()
 
   return (
     <nav className="bg-slate-900 text-white shadow-md">
@@ -29,6 +32,11 @@ const Navbar = () => {
             <div className="bg-slate-800 px-3 py-1 rounded-full text-sm font-semibold border border-slate-700">
               💰 $15,000
             </div>
+
+            {user ? <p className='text-green-400'>Logged in</p> : <p className='text-red-400'>Logged out</p>}
+
+            <button onClick={logout} className='my-4 border border-slate-500 p-3 py-1.5 rounded-full'>Log out</button>
+
           </div>
 
           {/* 3. Mobile Hamburger Button (Hidden on desktop) */}
